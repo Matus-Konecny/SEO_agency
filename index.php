@@ -270,7 +270,7 @@
                 </div>
               </div>
               <div class="col-lg-8">
-                <form id="contact-form" action="" method="post">
+                <form id="contact-form" action="thankyou.php" method="POST">
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="section-heading">
