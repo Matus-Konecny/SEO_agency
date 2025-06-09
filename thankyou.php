@@ -1,47 +1,28 @@
-<?php
-  include('templates/header.php');
-?>
-
+<?php include('templates/header.php'); ?>
 
 <main>
-  <section class="container">
-    <h1 class="col-100 text-center">ĎAKUJEME</h1><br>
-  </section>
-  <section class="container">
-    <div class="row">
-      <div class="col-100 text-center">
-          <?php
-            if ($_SERVER["REQUEST_METHOD"] === "POST") {
-              $name = $_POST["name"];
-              $surname = $_POST["surname"];
-              $email = $_POST["email"];
-              $subject = $_POST["subject"];
-              $message = $_POST["message"];
+  <div class="container d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+    <div class="text-center">
+      <?php
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+          $name = $_POST["name"];
+          $surname = $_POST["surname"];
+          $email = $_POST["email"];
+          $subject = $_POST["subject"];
+          $message = $_POST["message"];
 
-              if (!empty($name)) {
-                echo "<h2>$name ďakujeme za vyplnenie formulára</h2";
-              }
-      
-              // echo "<p><strong>Meno:</strong> $name</p>";
-              // echo "<p><strong>Priezvisko:</strong> $surname</p>";
-              // echo "<p><strong>Email:</strong> $email</p>";
-              // echo "<p><strong>Predmet:</strong> $subject</p>";
-              // echo "<p><strong>Správa:</strong><br>" . ($message) . "</p>";
-          } 
-          else {
-              echo "<p>Formulár nebol odoslaný správne.</p>";
-          }  
-          ?>
-      </div>
+          if (!empty($name)) {
+            echo "<h1 class='mb-4'>THANK YOU</h1>";
+            echo "<h4>$name, thank you for filling the form</h4>";
+          }
+        } else {
+          echo "<p>Formulár nebol odoslaný správne.</p>";
+        }
+      ?>
+      <br>
+      <a href="index.php" class="btn btn-primary mt-3">Back To Home</a>
     </div>
-  </section>
-  <section class="container">
-    <p class="col-100 text-center"><a href='index.php'>Back to Home</a></p>
-  </section>
-
-
+  </div>
 </main>
-    
-<?php
-  include('templates/footer.php');
-?>
+
+<?php include('templates/footer.php'); ?>
