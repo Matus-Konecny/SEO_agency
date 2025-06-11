@@ -1989,3 +1989,26 @@ body {
     border-radius: 23px;
   }
 }
+
+/* 
+---------------------------------------------
+Admin
+--------------------------------------------- 
+*/
+.admin-section {
+  padding-top: 160px;
+  text-align: center;
+}
+
+.admin-section table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.admin-section table th,
+.admin-section table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
