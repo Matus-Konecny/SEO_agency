@@ -449,9 +449,10 @@ Header Style
   padding-right: 15px;
 }
 
-.header-area .main-nav .nav li.has-sub:after {
+.header-area .main-nav .nav li.has-sub::after {
   font-family: FontAwesome;
-  content: "\f107";
+  content: none !important;
+  display: none !important;
   font-size: 12px;
   color: #fff;
   position: absolute;

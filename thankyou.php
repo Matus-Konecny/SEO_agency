@@ -13,7 +13,7 @@
 
           if (!empty($name)) {
             echo "<h1 class='mb-4'>THANK YOU</h1>";
-            echo "<h4>$name, thank you for filling the form</h4>";
+            echo "<h4>$name, thank you for contacting us</h4>";
           }
         } else {
           echo "<p>Formulár nebol odoslaný správne.</p>";

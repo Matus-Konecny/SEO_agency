@@ -1,3 +1,7 @@
+<?php
+require_once('_inc/autoload.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,19 +65,10 @@
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                      <li class="scroll-to-section"><a href="index.php" class="active">Home</a></li>
-                      <li class="scroll-to-section"><a href="index.php#services">Services</a></li>
-                      <li class="scroll-to-section"><a href="projects.php">Projects</a></li>
-                      <li class="has-sub">
-                          <a href="javascript:void(0)">Pages</a>
-                          <ul class="sub-menu">
-                              <li><a href="about.php">About Us</a></li>
-                              <li><a href="faqs.php">FAQs</a></li>
-                          </ul>
-                      </li>
-                      <li class="scroll-to-section"><a href="contact.php">Contact</a></li>
-                  </ul>   
+                    <?php
+                      $menu = new Menu();
+                      $menu->render();
+                    ?>
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
